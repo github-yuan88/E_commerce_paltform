@@ -6,6 +6,7 @@ import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Uers.vue'
 import Rights from '../components/power/Rights'
 import Roles from '../components/power/Roles'
+import Cate from '../components/goods/Cate'
 
 Vue.use(VueRouter)
 
@@ -20,11 +21,11 @@ const router = new VueRouter({
       children: [{ path: '/welcome', component: Welcome },
         { path: '/users', component: Users },
         { path: '/rights', component: Rights },
-        { path: '/roles', component: Roles }]
+        { path: '/roles', component: Roles },
+        { path: '/categories', component: Cate }]
     }
   ]
 })
-
 // 挂载路由导航守卫
 router.beforeEach((to, from, next) => {
   // to表示访问的路径，from表示从哪个路径跳转来 ， next是一个函数 表示放行
